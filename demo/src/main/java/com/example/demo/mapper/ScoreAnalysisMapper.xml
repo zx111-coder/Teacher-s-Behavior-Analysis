@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.ScoreAnalysisMapper">
+    <insert id="insert" parameterType="com.example.demo.entity.ScoreAnalysis">
+        INSERT INTO score_analysis (video_id, total_score, explanation_score,
+                                    writing_score, interaction_score, gestures_score, posture_score, movement_score)
+        VALUES (#{videoId}, #{totalScore}, #{explanationScore},
+                #{writingScore}, #{interactionScore}, #{gesturesScore}, #{postureScore}, #{movementScore})
+    </insert>
+
+    <select id="findByVideoId" parameterType="java.lang.Long" resultType="com.example.demo.entity.ScoreAnalysis">
+        SELECT * FROM score_analysis WHERE video_id = #{videoId}
+    </select>
+</mapper>

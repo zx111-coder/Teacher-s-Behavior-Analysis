@@ -1,0 +1,44 @@
+{
+  "video_id": "",
+  "analyze_result": {
+    "hand_point_down": 168,
+    "head_point_front": 0,
+    "head_point_side": 0,
+    "head_point_back": 0,
+    "hand_point_up": 60,
+    "hand_point_horizon": 100,
+    "hand_point_front": 0,
+    "look_at_student": 60,
+    "look_at_computer": 0,
+    "write_blackboard": 58,
+    "explanation": 79,
+    "look_at_blackboard": 111,
+    "look_at_projector": 0,
+    "hand_wave": 0,
+    "sit_times": 0,
+    "stand_times": 185,
+    "walk_times": 8,
+    "take_times": 137,
+    "sit_down": 0,
+    "hand_images": "",
+    "pose_images": ""
+  },
+  "teaching_score": 100,
+  "score_explanation": {
+    "score_breakdown": {
+      "explanation": 20,
+      "writing": 20,
+      "interaction": 30,
+      "gestures": 30
+    },
+    "comments": [
+      "\u8bb2\u89e3\u9891\u7387\u5f97\u5206: 20.0 (\u6bcf100\u5e27\u8bb2\u89e342.5\u6b21)",
+      "\u677f\u4e66\u9891\u7387\u5f97\u5206: 20.0 (\u6bcf100\u5e27\u677f\u4e6631.2\u6b21)",
+      "\u5b66\u751f\u4e92\u52a8\u5f97\u5206: 30.0 (\u6bcf100\u5e27\u770b\u5b66\u751f32.3\u6b21)",
+      "\u80a2\u4f53\u8bed\u8a00\u5f97\u5206: 30.0 (\u6bcf100\u5e27\u624b\u52bf\u52a8\u4f5c86.0\u6b21)"
+    ],
+    "suggestions": [
+      "\u8be5\u8001\u5e08\u975e\u5e38\u4f18\u79c0\uff0c\u6682\u65e0\u6539\u8fdb\u5efa\u8bae\uff01"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.ActionAnalysisMapper">
+    <insert id="insert" parameterType="com.example.demo.entity.ActionAnalysis">
+        INSERT INTO action_analysis (video_id, hand_point_down, head_point_front,
+                                     head_point_side, head_point_back, hand_point_up, hand_point_horizon,
+                                     hand_point_front, look_at_student, look_at_computer, write_blackboard,
+                                     explanation, look_at_blackboard, look_at_projector, hand_wave, sit_times,
+                                     stand_times, walk_times, take_times, sit_down)
+        VALUES (#{videoId}, #{handPointDown}, #{headPointFront},
+                #{headPointSide}, #{headPointBack}, #{handPointUp}, #{handPointHorizon},
+                #{handPointFront}, #{lookAtStudent}, #{lookAtComputer}, #{writeBlackboard},
+                #{explanation}, #{lookAtBlackboard}, #{lookAtProjector}, #{handWave}, #{sitTimes},
+                #{standTimes}, #{walkTimes}, #{takeTimes}, #{sitDown})
+    </insert>
+
+    <select id="findByVideoId" parameterType="java.lang.Long" resultType="com.example.demo.entity.ActionAnalysis">
+        SELECT * FROM action_analysis WHERE video_id = #{videoId}
+    </select>
+</mapper>

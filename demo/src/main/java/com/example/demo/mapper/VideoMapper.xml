@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.VideoMapper">
+    <insert id="insert" parameterType="com.example.demo.entity.Video">
+        INSERT INTO videos
+        (user_id, video_name,task_id,original_filename, original_video_path,original_video_url, processed_video_path,processed_video_url,processed_result_json_path, status, progress, file_size, created_at, updated_at)
+        VALUES
+            (#{userId}, #{videoName},#{taskId},#{originalFilename}, #{originalVideoPath},#{originalVideoUrl}, #{processedVideoPath},#{processedVideoUrl},#{processedResultJsonPath},
+             #{status}, #{progress}, #{fileSize}, NOW(), NOW())
+    </insert>
+
+    <select id="findById" parameterType="java.lang.Long" resultType="com.example.demo.entity.Video">
+        SELECT * FROM videos WHERE id = #{id}
+    </select>
+
+    <select id="selectAll" resultType="com.example.demo.entity.Video">
+        SELECT * FROM videos ORDER BY created_at DESC
+    </select>
+
+    <select id="findByPath" resultType="com.example.demo.entity.Video">
+        SELECT * FROM videos WHERE original_video_url = #{path}
+    </select>
+
+    <select id="findByTaskId" resultType="com.example.demo.entity.Video">
+        SELECT * FROM videos WHERE task_id = #{taskId}
+    </select>
+
+    <select id="findTaskIdbyUrl" resultType="com.example.demo.entity.Video">
+        SELECT * FROM videos WHERE original_video_url = #{videoUrl}
+    </select>
+
+    <update id="update" parameterType="com.example.demo.entity.Video">
+        UPDATE videos
+        SET user_id = #{userId},
+            task_id = #{taskId},
+            video_name = #{videoName},
+            original_filename = #{originalFilename},
+            original_video_path = #{originalVideoPath},
+            original_video_url = #{originalVideoUrl},
+            processed_video_path = #{processedVideoPath},
+            processed_video_url = #{processedVideoUrl},
+            processed_result_json_path=#{processedResultJsonPath},
+            status = #{status},
+            progress = #{progress},
+            file_size = #{fileSize},
+            updated_at = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteById" parameterType="java.lang.Long">
+        DELETE FROM videos WHERE id = #{id}
+    </delete>
+</mapper>
