@@ -1,4 +1,4 @@
-t-analysis是前端的vue3项目，demo是后端的spring项目，该项目中的登录角色分为管理员和用户，其中只有用户管理功能是管理员专有的权限，其余的功能是两个角色是都有的<br/>
+t-analysis是前端的vue3项目，demo是后端的spring项目，算法文件是关于骨骼点分析行为的主要算法（只可作为参考，不可直接使用），该项目中的登录角色分为管理员和用户，其中只有用户管理功能是管理员专有的权限，其余的功能是两个角色是都有的<br/>
 运行效果图如下：<br>
 <img width="500" height="510" alt="a1d568dd6cdd1e9ff0708253172d6e3" src="https://github.com/user-attachments/assets/41705690-27bb-4e84-8893-56b698f2f8c0" />
 <img width="1920" height="908" alt="视频上传图" src="https://github.com/user-attachments/assets/a14e81a1-4cda-4713-a4c8-c57c269577c3" />
